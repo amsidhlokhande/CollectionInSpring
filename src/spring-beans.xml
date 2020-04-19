@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="com.amsidh.mvc.beans.Person">
+       <property name="personId" value="76876"/>
+       <property name="name" value="Amsidh Lokhande"/>
+       <property name="bankAccounts">
+           <list>
+               <bean class="com.amsidh.mvc.beans.BankAccount">
+                  <property name="bankAccountNumber" value="12345"/>
+                  <property name="bankName" value="SBI"/>
+                  <property name="balance" value="5600.65"/>
+                  <property name="nominee">
+                      <set>
+                          <bean class="com.amsidh.mvc.beans.Nominee">
+                            <property name="nomineeId" value="1"/>
+                            <property name="nomineeName" value="Adithi"/>
+                            <property name="address" value="Lohegaon"/>
+                          </bean>
+                          <bean class="com.amsidh.mvc.beans.Nominee">
+                            <property name="nomineeId" value="2"/>
+                            <property name="nomineeName" value="Aditya"/>
+                             <property name="address" value="Lohegaon"/>
+                          </bean>
+                      </set>
+                  </property>
+               </bean>
+               
+               <bean class="com.amsidh.mvc.beans.BankAccount">
+                  <property name="bankAccountNumber" value="56789"/>
+                  <property name="bankName" value="ICICI"/>
+                  <property name="balance" value="1022.23"/>
+                  <property name="nominee">
+                      <set>
+                          <bean  class="com.amsidh.mvc.beans.Nominee">
+                            <property name="nomineeId" value="1"/>
+                            <property name="nomineeName" value="Adithi"/>
+                            <property name="address" value="Lohegaon"/>
+                          </bean>
+                          <bean class="com.amsidh.mvc.beans.Nominee">
+                            <property name="nomineeId" value="2"/>
+                            <property name="nomineeName" value="Aditya"/>
+                            <property name="address" value="Lohegaon"/>
+                          </bean>
+                           <bean class="com.amsidh.mvc.beans.Nominee">
+                            <property name="nomineeId" value="3"/>
+                            <property name="nomineeName" value="Anjali"/>
+                            <property name="address" value="Lohegaon"/>
+                          </bean>
+                      </set>
+                  </property>
+               </bean>
+               
+               <bean class="com.amsidh.mvc.beans.BankAccount">
+                  <property name="bankAccountNumber" value="98765"/>
+                  <property name="bankName" value="AXIS"/>
+                  <property name="balance" value="324332.33"/>
+                  <property name="nominee">
+                      <set>
+                          <bean class="com.amsidh.mvc.beans.Nominee">
+                            <property name="nomineeId" value="1"/>
+                            <property name="nomineeName" value="Babasha"/>
+                            <property name="address" value="Shiranal"/>
+                          </bean>
+                          <bean class="com.amsidh.mvc.beans.Nominee">
+                            <property name="nomineeId" value="2"/>
+                            <property name="nomineeName" value="Vitbai"/>
+                            <property name="address" value="Shiranal"/>
+                          </bean>
+                           <bean class="com.amsidh.mvc.beans.Nominee">
+                            <property name="nomineeId" value="3"/>
+                            <property name="nomineeName" value="Adithi"/>
+                            <property name="address" value="Lohegaon"/>
+                          </bean>
+                      </set>
+                  </property>
+               </bean>
+               
+           </list>
+       </property>
+       
+       <property name="vehicles">
+          <map>
+             <entry key="BIKE">
+              <list>
+                 <bean class="com.amsidh.mvc.beans.Vehicle">
+                   <property name="vehicleId" value="1"/>
+                   <property name="vehicleName" value="ShineHonda"/>
+                   <property name="vehicleNumber" value="MH14DZ-2018"/>
+                 </bean>
+                 <bean class="com.amsidh.mvc.beans.Vehicle">
+                   <property name="vehicleId" value="2"/>
+                   <property name="vehicleName" value="TVS-Zest"/>
+                   <property name="vehicleNumber" value="MH12NH-3090"/>
+                 </bean> 
+              </list>
+             </entry>
+             <entry key="CAR">
+              <list>
+                 <bean class="com.amsidh.mvc.beans.Vehicle">
+                   <property name="vehicleId" value="1"/>
+                   <property name="vehicleName" value="Maruthi-Wagnor"/>
+                   <property name="vehicleNumber" value="MH12NJ-7061"/>
+                 </bean>
+              </list>
+             </entry>
+             
+              <entry key="TRACTOR">
+              <list>
+                 <bean class="com.amsidh.mvc.beans.Vehicle">
+                   <property name="vehicleId" value="1"/>
+                   <property name="vehicleName" value="HOLAND"/>
+                   <property name="vehicleNumber" value="KA28HG-9832"/>
+                 </bean>
+                  <bean class="com.amsidh.mvc.beans.Vehicle">
+                   <property name="vehicleId" value="2"/>
+                   <property name="vehicleName" value="HINDUSTAN"/>
+                   <property name="vehicleNumber" value="KA28PK-3322"/>
+                 </bean>
+              </list>
+             </entry>
+          </map>
+       </property>
+    </bean>
+    
+   <!--  
+   <bean id="parent" class="">
+	   <property name="addresses">
+	       <list>
+	           <value>address1</value>
+	           <value>address2</value>
+	           <value>address3</value>
+	       </list>
+	   </property>
+   </bean>
+
+   <bean id="child" class="" parent="parent">
+	   <property name="addresses">
+	      <list merge="true">
+	           <value>address4</value>
+	           <value>address5</value>
+	      </list>
+	   </property>
+   </bean> 
+    -->
+    
+</beans>
